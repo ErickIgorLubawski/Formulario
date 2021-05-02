@@ -8,13 +8,13 @@ from passagens.models import Passagem, ClasseViagem, Pessoa
 
 class PassagemForms(forms.ModelForm):
 
-    data_pesquisa = forms.DateField(label='Data de pesquisa', disabled=True, initial= datetime.today)
+    data_pesquisa = forms.DateField(label='data pesquis', disabled=True, initial= datetime.today)
 
 
     class Meta:
         model = Passagem
         fields = '__all__'
-        labels = { 'data_ida' : 'Data de ida', 'data_volta':'data de volta','informacoes':'informações','classe_viagem':'Classe de voo'}
+        labels = {'origem' : 'Origem ' ,'destino' : 'Destino' , 'data_ida' : 'Dalta de ida', 'data_volta':'Dat de volta','informacoes':' Informaçoes sobre sua viajem ','classe_viagem':''}
         widgets = { 
             'data_ida':DatePicker(),
             'data_volta': DatePicker(),
