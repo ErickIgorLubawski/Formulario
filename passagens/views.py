@@ -20,5 +20,5 @@ def revisao_consulta(request):
             return render(request, 'minha_consulta.html', contexto)
         else:
             print('Form invalido')
-            contexto = {'form': form , 'pessoa_form':pessoa}
+            contexto = {'form': form , 'pessoa_form' :pessoa_form}
             return render(request,'index.html', contexto)
